@@ -7,7 +7,7 @@ function radianToDegree (radian){
     const degree = radian * (180/Math.PI);
     return degree; 
 }
-const radian = 1;
+const radian = 199;
 const result = radianToDegree(radian).toFixed(2);
 // console.log("Degree:",result);
 
@@ -26,7 +26,7 @@ function isJavaScriptFile(fileName){
         return false;
     }
 }
-const fileName = 'index.js';
+const fileName = 'index.png.js';
 const result2 = isJavaScriptFile(fileName);
 // console.log(result2);
 
@@ -49,9 +49,9 @@ function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity) {
     return totalPrice;
 }
 
-const dieselQuantity = 1;
-const petrolQuantity = 1;
-const octaneQuantity = 1;
+const dieselQuantity = 0;
+const petrolQuantity = 2;
+const octaneQuantity = 3;
 const result3 = oilPrice(dieselQuantity, petrolQuantity, octaneQuantity);
 // console.log(result3);
 
@@ -72,6 +72,25 @@ function publicBusFare(people){
 
     return publicBusFare; 
 }
-const people = 65;
+const people = 365;
 const result4 = publicBusFare(people);
-console.log("Fare for Public Bus:",result4); 
+// console.log("Fare for Public Bus:",result4); 
+
+//-----------------------------------------------------
+//-----------------------------------------------------
+//Final Problem
+//------------------------------------------------------
+//------------------------------------------------------
+function isBestFriend(firstFriend, secondFriend){
+    if(firstFriend.name.toLowerCase() == secondFriend.friend.toLowerCase() 
+    && secondFriend.name.toLowerCase() == firstFriend.friend.toLowerCase()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+const firstFriend = {name:"ABUL",friend:"babul"};
+const secondFriend = {name:"babul",friend:"ABUL"};
+const result5 = isBestFriend(firstFriend,secondFriend);
+// console.log(result5);
