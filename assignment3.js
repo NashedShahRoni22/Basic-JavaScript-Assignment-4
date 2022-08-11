@@ -4,7 +4,7 @@ function radianToDegree (radian){
         const degree = (radian * (180/Math.PI)).toFixed(2);
         return degree;
     }else{
-        return "Enter a valid number"
+        return "Enter a valid number!"
     }
      
 }
@@ -14,22 +14,21 @@ const result = radianToDegree(radian);
 
 //second problem
 function isJavaScriptFile(fileName){
-    if(fileName.endsWith('.js')){
-        return true;
+    if(typeof fileName == 'string'){
+        if(fileName.endsWith('.js')){
+            return true;
+        }else{
+            return false;
+        }
     }else{
-        return false;
+        return 'Enter a valid file name!'
     }
 }
-const fileName = 'index.png.js';
+const fileName = 'index.html.png.js';
 const result2 = isJavaScriptFile(fileName);
-// console.log(result2);
+console.log(result2);
 
-
-//-----------------------------------------------------
-//-----------------------------------------------------
 //third problem
-//------------------------------------------------------
-//------------------------------------------------------
 function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity) {
     const dieselLittre = 114;
     const petrolLittre = 130;
