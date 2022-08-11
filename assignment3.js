@@ -26,27 +26,31 @@ function isJavaScriptFile(fileName){
 }
 const fileName = 'index.html.png.js';
 const result2 = isJavaScriptFile(fileName);
-console.log(result2);
+// console.log(result2);
 
 //third problem
 function oilPrice(dieselQuantity, petrolQuantity, octaneQuantity) {
-    const dieselLittre = 114;
-    const petrolLittre = 130;
-    const octaneLittre = 135;
+    if(dieselQuantity>=0 && petrolQuantity >=0 && octaneQuantity >=0){
+        const dieselLittre = 114;
+        const petrolLittre = 130;
+        const octaneLittre = 135;
 
-    const dieselPrice = dieselLittre * dieselQuantity;
-    const petrolPrice = petrolLittre * petrolQuantity;
-    const octanePrice = octaneLittre * octaneQuantity;
+        const dieselPrice = dieselLittre * dieselQuantity;
+        const petrolPrice = petrolLittre * petrolQuantity;
+        const octanePrice = octaneLittre * octaneQuantity;
 
-    const totalPrice = dieselPrice + petrolPrice + octanePrice;
-    return totalPrice;
+        const totalPrice = dieselPrice + petrolPrice + octanePrice;
+        return totalPrice;
+    }else{
+        return 'Enter a valid Quantity!'
+    }
 }
 
 const dieselQuantity = 0;
 const petrolQuantity = 2;
 const octaneQuantity = 3;
 const result3 = oilPrice(dieselQuantity, petrolQuantity, octaneQuantity);
-// console.log(result3);
+console.log(result3);
 
 //-----------------------------------------------------
 //-----------------------------------------------------
