@@ -1,24 +1,18 @@
-//-----------------------------------------------------
-//-----------------------------------------------------
 //first problem
-//------------------------------------------------------
-//------------------------------------------------------
 function radianToDegree (radian){
-    const degree = radian * (180/Math.PI);
-    return degree; 
+    if(radian > 0){
+        const degree = (radian * (180/Math.PI)).toFixed(2);
+        return degree;
+    }else{
+        return "Enter a valid number"
+    }
+     
 }
-const radian = 199;
-const result = radianToDegree(radian).toFixed(2);
+const radian = 10;
+const result = radianToDegree(radian);
 // console.log("Degree:",result);
 
-
-
-
-//-----------------------------------------------------
-//-----------------------------------------------------
 //second problem
-//------------------------------------------------------
-//------------------------------------------------------
 function isJavaScriptFile(fileName){
     if(fileName.endsWith('.js')){
         return true;
@@ -72,7 +66,7 @@ function publicBusFare(people){
 
     return publicBusFare; 
 }
-const people = 365;
+const people = 50;
 const result4 = publicBusFare(people);
 // console.log("Fare for Public Bus:",result4); 
 
